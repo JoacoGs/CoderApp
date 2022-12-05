@@ -1,14 +1,14 @@
 import { useFonts } from "expo-font";
-import ShopNavigator from "./src/navigation/ShopNavigator";
+import BottomTabNavigator from "./src/navigation/BottomTabNavigator";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Sono: require("./src/assets/fonts/Sono-Regular.ttf"),
+    Sono: require("./src/fonts/Sono-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
     return null;
   }
 
-  return <ShopNavigator />;
+  return <BottomTabNavigator />;
 }
