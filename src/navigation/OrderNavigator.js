@@ -1,14 +1,14 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OrdersScreen from "../screens/OrdersScreen";
+
 import { COLORS } from "../constants/colors";
-import CartScreen from "../screens/CartScreen";
 
 const Stack = createNativeStackNavigator();
 
-export default CartNavigator = () => {
+export default ShopNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Categories"
+      initialRouteName="Orders"
       screenOptions={{
         headerStyle: { backgroundColor: COLORS.primary },
         headerTintColor: COLORS.secondary,
@@ -18,9 +18,11 @@ export default CartNavigator = () => {
       }}
     >
       <Stack.Screen
-        name="Cart"
-        component={CartScreen}
-        options={{ title: "Carrito" }}
+        name="Orders"
+        component={OrdersScreen}
+        options={{
+          title: "Ordenes",
+        }}
       />
     </Stack.Navigator>
   );
